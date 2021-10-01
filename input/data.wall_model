@@ -1,0 +1,7 @@
+# =====================================
+# | Parameters for WALL_MODEL package |
+# =====================================
+ &WALL_MODEL_PARM01
+ variableCd=.TRUE.,
+ roughness_length=3.3e-4,
+/

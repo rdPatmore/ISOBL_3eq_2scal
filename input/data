@@ -1,0 +1,93 @@
+# ====================
+# | Model parameters |
+# ====================
+#
+# Continuous equation parameters
+ &PARM01
+ vectorInvariantMomentum=.FALSE.,
+ useCoriolis=.TRUE.,
+ Tref = 28*-0.12195,
+ Sref = 28*34.5,
+ selectCoriMap = 0,
+ f0 = -1.4-4,
+ gravity=9.81,
+ tAlpha = 3.2861e-5,
+ sBeta = 7.8358e-4,
+ rhoConst = 1030,
+ rhoNil = 1030,
+ useSingleCPUio = .TRUE.,
+ no_slip_sides=.FALSE.,
+ no_slip_bottom=.FALSE.,
+ rigidLid=.TRUE.,
+ implicitFreeSurface=.FALSE.,
+ implicitDiffusion=.TRUE.,
+ implicitViscosity=.TRUE.,
+ exactConserv=.FALSE.,
+ nonHydrostatic=.TRUE.,
+ selectNHfreeSurf=0,
+ staggerTimeStep=.TRUE.,
+ momStepping=.TRUE.,
+ saltStepping=.TRUE.,
+ tempStepping=.TRUE.,
+ readBinaryPrec=64,
+ writeBinaryPrec=64,
+
+# Diffusion
+ diffKhT=4e-4,
+ diffKrT=4e-4,
+ diffKhS=4e-4,
+ diffKrS=4e-4,
+
+# Viscosity
+ viscAr=4e-4,
+ viscAh=4e-4,
+
+# Advection
+ tempAdvScheme=77,
+ saltAdvScheme=77,
+
+# topog params
+ hFacMin=0.2,
+ /
+
+# Elliptic solver parameters
+ &PARM02
+ cg2dMaxIters=1000,
+ cg2dTargetResidual=1.E-10,
+ cg3dMaxIters=200,
+ cg3dTargetResidual=1.E-7,
+ /
+
+# Time stepping parameters
+ &PARM03
+ niter0=0,
+ endTime=1382400,
+ deltaT=4.0,
+ abEps=0.1,
+ dumpFreq=0,
+ pChkPtFreq=10800.0,
+ chkPtFreq=3600.0,
+# pickupSuff='ckptB',
+ monitorFreq=3600,
+
+##########################################
+ /
+
+# Gridding parameters
+ &PARM04
+ usingCartesianGrid=.TRUE.,
+ delX=100*4,
+ delY=100*4,
+ delR=28*4,
+ verShift=1,
+ /
+
+# Input datasets
+ &PARM05
+ bathyFile='bathy.bin',
+ uVelInitFile='ini_uvel.bin',
+ vVelInitFile='ini_vvel.bin',
+# hydrogThetaFile='ini_temp.bin',
+# hydrogSaltFile='ini_salt.bin',
+# pForceXFile='pForceX.bin',
+ /

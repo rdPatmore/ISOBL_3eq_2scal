@@ -1,0 +1,11 @@
+&RBCS_PARM01
+ useRBCtemp=.TRUE.,
+ useRBCsalt=.TRUE.,
+ tauRelaxT = 60,
+ tauRelaxS = 60,
+ relaxMaskFile(1) = 'rbcs_mask.bin',
+ relaxMaskFile(2) = 'rbcs_mask.bin',
+#
+ relaxTFile = 'rbcs_temp.bin',
+ relaxSFile = 'rbcs_salt.bin',
+/

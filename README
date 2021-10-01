@@ -1,0 +1,11 @@
+Ryan D. Patmore 2021-10-01
+
+This is an ISOBL model with a shifted boundary condition adjustment. The case
+has a 4 m resolution with a 400 * 400* 112 m domain. The 3eq. are impelemented
+with a law-of-the-wall representation for C_d. Law-of-the-wall is applied to
+both momentum and 3eq.
+
+In order for the wall model to work you need to create a symbolic link from
+MITgcm_source/pkg/ to the wall_model folder within code/
+
+This configuration was tested using c65k.

@@ -1,0 +1,16 @@
+# ===================================
+# | Parameters for SHELFICE package |
+# ===================================
+ &SHELFICE_PARM01
+ SHELFICEtopoFile='ini_shice_topo.bin',
+ SHELFICEloadAnomalyFile = 'ini_shice_p.bin',
+ no_slip_shelfice = .FALSE.,
+ SHELFICEwriteState = .TRUE.,
+ constFlux = .False.,
+ modelSalt = .TRUE.,
+# SHELFICEDragQuadratic = 3e-3,
+ SHELFICEselectDragQuadr = 2,
+ SHELFICEkappa = 0.,
+ SHELFICEheatTransCoeff = 0.011,
+ SHELFICEsaltTransCoeff = 3.1e-4,
+/
