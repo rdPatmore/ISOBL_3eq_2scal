@@ -9,3 +9,5 @@ In order for the wall model to work you need to create a symbolic link from
 MITgcm_source/pkg/ to the wall_model folder within code/
 
 This configuration was tested using c65k.
+
+_const appended files are for running a constant flux case without 3eq.
